@@ -1,0 +1,9 @@
+route:
+  receiver: 'slack_alert'
+receivers:
+  - name: 'slack_alert'
+    slack_configs:
+      - api_url: 'https://hooks.slack.com/services/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'
+        channel: '#alert_test'
+        text: "{{ .CommonAnnotations.summary }}"
+        send_resolved: true

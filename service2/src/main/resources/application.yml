@@ -1,0 +1,19 @@
+server:
+  port: 8082
+management:
+  endpoints:
+    web:
+      exposure:
+        include: prometheus
+  metrics:
+    use-global-registry: true
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/testdb
+    username: test
+    password: pass
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    database: MYSQL
+    hibernate:
+      ddl-auto: update
